@@ -26,11 +26,16 @@ function createGalleryImageMarkap(items) {
     })
     .join('');
 }
+
 function onGalleryContainerClick(event) {
   event.preventDefault();
   const isGalleryImage = event.target.classList.contains('gallery__image');
   if (!isGalleryImage) {
     return;
   }
+
   const currentImgUrl = event.target.dataset.source;
+
+  const instance = basicLightbox.create(`<img src="${currentImgUrl}" width="1280" height="auto">`);
+  instance.show();
 }
