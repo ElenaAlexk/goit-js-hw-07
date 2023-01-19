@@ -40,10 +40,10 @@ function onGalleryContainerClick(event) {
     `<img src="${currentImgUrl}" width="1280"/>`,
 
     {
-      onShow: instance => {
+      onShow: (instance) => {
         window.addEventListener('keydown', onEscKeyPress);
       },
-      onClose: instance => {
+      onClose: (instance) => {
         window.removeEventListener('keydown', onEscKeyPress);
       },
     }
