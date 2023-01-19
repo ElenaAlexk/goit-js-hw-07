@@ -37,13 +37,13 @@ function onGalleryContainerClick(event) {
   const currentImgUrl = event.target.dataset.source;
 
   const instance = basicLightbox.create(
-    `<img src="${currentImgUrl}" width="1280"/>`,
+    `<img src="${currentImgUrl}" width="1280" height="auto"/>`,
 
     {
-      onShow: (instance) => {
+      onShow: instance => {
         window.addEventListener('keydown', onEscKeyPress);
       },
-      onClose: (instance) => {
+      onClose: instance => {
         window.removeEventListener('keydown', onEscKeyPress);
       },
     }
