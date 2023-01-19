@@ -51,8 +51,10 @@ function onGalleryContainerClick(event) {
   instance.show();
 
   function onEscKeyPress(event) {
-    const ESC_KEY_CODE = 'Escape';
-    if (event.code === 'ESC_KEY_CODE') {
+    //const ESC_KEY_CODE = 'Escape';
+    event.key === 'Escape';
+    //if (event.code === 'ESC_KEY_CODE') {
+    if (event.key) {
       instance.close();
     }
   }
