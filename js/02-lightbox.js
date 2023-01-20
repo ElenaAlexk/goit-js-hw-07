@@ -17,7 +17,8 @@ function createGalleryImageMarkap(items) {
       <a class="gallery__item" href="${original}">
   <img class="gallery__image" 
   src="${preview}" 
-  alt="${description}" />
+  alt="${description}"
+  title="${description}" />
 </a>`;
     })
     .join('');
@@ -31,4 +32,8 @@ function onGalleryContainerClick(event) {
   }
 
   const currentImgUrl = event.target.dataset.source;
+
+  var lightbox = new SimpleLightbox('.gallery a', {
+    //alt="${description}"
+  });
 }
