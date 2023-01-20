@@ -18,7 +18,7 @@ function createGalleryImageMarkap(items) {
   <img class="gallery__image" 
   src="${preview}" 
   alt="${description}"
-  title="${description}" />
+   />
 </a>`;
     })
     .join('');
@@ -34,6 +34,8 @@ function onGalleryContainerClick(event) {
   const currentImgUrl = event.target.dataset.source;
 
   var lightbox = new SimpleLightbox('.gallery a', {
-    //alt="${description}"
+    captionsData: 'alt',
+    captionPosition: 'bottom',
+    captionDelay: 250,
   });
 }
