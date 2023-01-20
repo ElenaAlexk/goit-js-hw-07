@@ -3,6 +3,17 @@
   --animation-duration: 250ms;
 }
 
+.item__link {
+  display: inline-block;
+  padding: 3px;
+  box-shadow: inset 0px 1px 11px 5px rgb(0 0 0 / 75%);
+  border-radius: 5px;
+  text-decoration: none;
+  padding-right: 7px;
+  padding-left: 7px;
+  margin-bottom: 10px;
+}
+
 .gallery {
   display: grid;
   max-width: 1140px;
@@ -18,8 +29,7 @@
 
 .gallery__item {
   position: relative;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
 .gallery__image:hover {
