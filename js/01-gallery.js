@@ -51,8 +51,7 @@ function onGalleryContainerClick(event) {
   instance.show();
 
   function onEscKeyPress(event) {
-    event.key === 'Escape';
-    if (event.key) {
+    if (event.key === 'Escape') {
       instance.close();
     }
   }

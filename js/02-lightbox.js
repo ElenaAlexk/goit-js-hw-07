@@ -24,6 +24,12 @@ function createGalleryImageMarkap(items) {
     .join('');
 }
 
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionPosition: 'bottom',
+  captionDelay: 250,
+});
+
 function onGalleryContainerClick(event) {
   event.preventDefault();
   const isGalleryImage = event.target.classList.contains('gallery__image');
@@ -32,10 +38,4 @@ function onGalleryContainerClick(event) {
   }
 
   const currentImgUrl = event.target.dataset.source;
-
-  var lightbox = new SimpleLightbox('.gallery a', {
-    captionsData: 'alt',
-    captionPosition: 'bottom',
-    captionDelay: 250,
-  });
 }
